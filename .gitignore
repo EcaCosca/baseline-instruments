@@ -1,0 +1,10 @@
+# Vendor documents — copyrighted, kept locally, NOT published
+docs/*.pdf
+docs/airwave-manual.txt
+hardware/fcc/*.pdf
+
+# Captures can be large and may contain network/identifying data
+captures/*
+!captures/.gitkeep
+
+.DS_Store
