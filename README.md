@@ -46,6 +46,15 @@ other devices.
 This is a **power delivery problem, not a fault**, and for a bench display on
 permanent USB power it mostly doesn't matter. See hardware/shopping-list.md.
 
+## Goal
+
+Phone as the brain, Airwave as the glass, earbuds as the voice, FlySight 2 as
+the sensor. See [docs/architecture.md](docs/architecture.md).
+
+Comparable in spirit to the Deep and Steep **Insight** + ENGO glasses combo,
+but with a 428x240 16-bit colour framebuffer instead of a 3-field readout, and
+a phone-class computer doing the thinking.
+
 ## Plan
 
 1. **Get it powered and enumerating** — powered USB hub so it has current
@@ -58,8 +67,14 @@ permanent USB power it mostly doesn't matter. See hardware/shopping-list.md.
 5. **Decompile Recon Engage** — the companion app knows the device protocol.
 6. **Hello world on the HUD** — smallest possible APK that draws to the
    display. This is the real milestone.
-7. **BASEline data path** — decide between an on-device app pulling data over
-   BT/WiFi vs. driving the display from a phone.
+7. **BASEline data path** — phone-side engine consuming FlySight 2 live BLE
+   telemetry (protocol already documented, see
+   [docs/flysight-integration.md](docs/flysight-integration.md)), fanning out
+   to HUD frames and audio cues.
+
+Independent of all of the above, and the recommended **starting point**: the
+**audible engine** (ground speed, flare cues, altitude callouts) is entirely
+phone-side, needs no Airwave progress at all, and is useful on its own.
 
 ## Layout
 

@@ -50,7 +50,7 @@ color-coded state are all realistic.
 ## System design
 
 ```
-  FlySight (BLE, if v2) ──┐
+  FlySight 2 (BLE, live)  ─┐
                           │
   Phone GPS / baro ───────┼──►  PHONE  ("the brain")
                           │     ├─ sensor fusion
@@ -96,10 +96,10 @@ Render-ready values only; the HUD does no math.
 
 ## Open questions (blocking, in order)
 
-1. **Which FlySight?** FlySight 2 has BLE and can stream live. FlySight 1 is
-   USB-only with no radio — live integration is impossible with a v1, which
-   would reduce it to post-flight log import. This determines whether live
-   FlySight data is even on the table.
+1. ~~**Which FlySight?**~~ **RESOLVED: FlySight 2.** Live GNSS telemetry over
+   BLE is a first-party, officially supported protocol — full packet format and
+   UUIDs in [flysight-integration.md](flysight-integration.md). No reverse
+   engineering needed on this half.
 2. **What Android version does Snow2 actually run?** Gates the whole app
    toolchain. The MOD Live was Gingerbread (2.3); Snow2 is later silicon and
    probably newer. Must be read off the device.
