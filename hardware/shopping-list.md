@@ -62,18 +62,46 @@ dañar la placa.
 Para mirar buses internos (SPI/I2C) si llegamos a ese nivel.
 - Buscar: `analizador logico 8 canales 24mhz saleae`
 
-### 7. Batería de reemplazo — NO comprar todavía
-Hay que abrir el equipo y medir primero: conector, capacidad, y si la celda
-tiene placa de protección. Comprar a ciegas es tirar plata.
-Cuando sepamos: `bateria lipo 3.7v con placa de proteccion conector`
+### 7. Batería de reemplazo — AHORA SÍ sabemos qué comprar
+La celda original es una **EVE 903041**: LiPo **3.7 V, 1200 mAh**, aprox.
+**9.0 × 30 × 41 mm**. Se reutiliza la **placa de protección original** y se
+suelda una celda nueva.
+
+- Buscar: `bateria lipo 3.7v 1200mah`
+- Buscar: `bateria lipo 903041`
+- Buscar: `celda lipo 3.7v 1200mah` (sin placa — reusamos la original)
+
+Priorizá que las **medidas** coincidan; la capacidad es lo segundo. Si es más
+gruesa que 9 mm no entra.
+
+**Trampa importante:** si una celda LiPo baja de ~2 V, el circuito de
+protección se traba y no carga más. Cargá la celda nueva a **3 V o más antes
+de instalarla**. Es la forma más común de arruinar esta reparación.
+
+### 8. Herramientas para abrir el equipo
+Son **5 tornillos Torx T-6**, y la carcasa de la batería está **pegada** (no
+atornillada).
+
+- Buscar: `destornillador torx t6` o `kit destornilladores precision torx`
+- Buscar: `multimetro digital` — para medir la celda antes y después
+- Buscar: `cautin 60w estacion de soldar` + `estaño 0.6mm` — para la placa de protección
 
 ## Resumen
 
 Si querés comprar una sola cosa: **el hub USB con fuente externa** (#1).
 Si querés comprar tres: **hub alimentado + cable corto 24AWG + medidor USB**.
+Si vas a abrirlo igual: sumá **Torx T-6 + multímetro + celda LiPo 1200 mAh**.
 Eso te deja el equipo encendido y comunicándose con la Mac de forma estable,
 que es el requisito para todo lo demás.
 
 ## Alternativa gratis, para probar hoy mismo
 Enchufá el micro-USB **directo a un puerto USB-C de la MacBook** (no al dock).
 Los puertos de la Mac anuncian hasta 1.5 A. Puede alcanzar y no gastás nada.
+
+## Audio — para los audibles
+El audible (velocidad de suelo, flare, altitud) lo maneja el teléfono, no el
+Airwave. Para timing de flare, **auriculares con cable** son mejores: los
+Bluetooth agregan 150–250 ms de latencia, que en un flare importa.
+
+- Buscar: `auriculares in ear con cable microfono`
+- Si el teléfono no tiene jack: `adaptador usb c a jack 3.5mm`
