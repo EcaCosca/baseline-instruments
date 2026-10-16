@@ -76,14 +76,32 @@ Independent of all of the above, and the recommended **starting point**: the
 **audible engine** (ground speed, flare cues, altitude callouts) is entirely
 phone-side, needs no Airwave progress at all, and is useful on its own.
 
+## Tooling: REA
+
+We use [`morluto/rea`](https://github.com/morluto/rea) (Reverse Engineer
+Anything) as the analysis toolchain. Its Android/ADB tools map almost
+one-to-one onto this project's open questions — see
+[docs/rea-workflow.md](docs/rea-workflow.md) for the capability map,
+prerequisites, and platform constraints.
+
+Before working in this directory:
+
+```bash
+source tools/env.sh      # JDK 21 for JADX; node 24.19.0 comes from .tool-versions
+```
+
 ## Layout
 
 - `docs/` — research notes, protocol findings
 - `hardware/` — shopping list, teardown notes, measurements
 - `captures/` — USB/network captures
-- `tools/` — scripts
+- `tools/` — scripts (`probe.sh` device probe, `env.sh` toolchain env)
 - `notes/` — scratch
 
 ## Tooling installed
 
-`adb` 1.0.41, `fastboot`, `lsusb`, `nmap`, `tcpdump` (system).
+`adb` 1.0.41, `fastboot`, `lsusb`, `nmap`, `gh`, `poppler`, `tcpdump` (system),
+`openjdk@21` (keg-only, activated by `tools/env.sh`).
+
+Node is pinned to **24.19.0** via `.tool-versions` because REA does not support
+the 23.x line that is this machine's global default. Scoped to this directory.

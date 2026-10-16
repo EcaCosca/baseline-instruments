@@ -56,6 +56,13 @@
   Unverified mirror; treat downloads from soft112 with suspicion, but a
   firmware image would be very useful if it checks out.
 
+### Tooling decision
+
+Adopted **REA** (`morluto/rea`) as the analysis toolchain on 2026-10-16.
+Verified authentic via the GitHub API and npm registry; note that several
+impostor repos with copied READMEs exist. Capability map, prerequisites and
+caveats: [rea-workflow.md](rea-workflow.md).
+
 ### Open questions
 
 - Does the Airwave run `adbd`, and is it on by default over USB?
