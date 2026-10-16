@@ -8,3 +8,5 @@ captures/*
 !captures/.gitkeep
 
 .DS_Store
+hardware/fcc/*
+!hardware/fcc/.gitkeep
